@@ -1,6 +1,6 @@
 {
     "name": "pawanjoshi5/sanitizer",
-    "description": "Data sanitizer and Laravel 7 form requests with input sanitation.",
+    "description": "Data sanitizer and Laravel 8 form requests with input sanitation.",
     "keywords": ["laravel", "sanitation", "input sanitation", "input sanitizer", "input", "transform input", "input filter"],
     "license": "MIT",
     "authors": [{
@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Waavi\\Sanitizer\\": "src/"
+            "nopensource\\Sanitizer\\": "src/"
         }
     },
     "autoload-dev": {
@@ -26,10 +26,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Waavi\\Sanitizer\\Laravel\\SanitizerServiceProvider"
+                "Nopensource\\Sanitizer\\Laravel\\SanitizerServiceProvider"
             ],
             "aliases": {
-                "Sanitizer": "Waavi\\Sanitizer\\Laravel\\Facade"
+                "Sanitizer": "Nopensource\\Sanitizer\\Laravel\\Facade"
             }
         }
     },
