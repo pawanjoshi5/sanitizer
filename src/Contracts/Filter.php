@@ -1,6 +1,6 @@
 <?php
 
-namespace Waavi\Sanitizer\Contracts;
+namespace Nopensource\Sanitizer\Contracts;
 
 interface Filter
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace Waavi\Sanitizer\Laravel;
+namespace Nopensource\Sanitizer\Laravel;
 
 use Closure;
 use InvalidArgumentException;
-use Waavi\Sanitizer\Contracts\Filter;
-use Waavi\Sanitizer\Sanitizer;
+use Nopensource\Sanitizer\Contracts\Filter;
+use Nopensource\Sanitizer\Sanitizer;
 
 class Factory
 {
@@ -53,7 +53,7 @@ class Factory
         }
 
         if (!($customFilter instanceof Closure) && !in_array(Filter::class, class_implements($customFilter))) {
-            throw new InvalidArgumentException('Custom filter must be a Closure or a class implementing the Waavi\Sanitizer\Contracts\Filter interface.');
+            throw new InvalidArgumentException('Custom filter must be a Closure or a class implementing the Nopensource\Sanitizer\Contracts\Filter interface.');
         }
 
         $this->customFilters[$name] = $customFilter;

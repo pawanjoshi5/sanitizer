@@ -1,6 +1,6 @@
 <?php
 
-namespace Waavi\Sanitizer\Laravel;
+namespace Nopensource\Sanitizer\Laravel;
 
 use Illuminate\Foundation\Http\FormRequest as LaravelFormRequest;
 

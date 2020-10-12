@@ -1,8 +1,8 @@
 <?php
 
-namespace Waavi\Sanitizer\Filters;
+namespace Nopensource\Sanitizer\Filters;
 
-use Waavi\Sanitizer\Contracts\Filter;
+use Nopensource\Sanitizer\Contracts\Filter;
 
 class Capitalize implements Filter
 {

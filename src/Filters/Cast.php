@@ -1,9 +1,9 @@
 <?php
 
-namespace Waavi\Sanitizer\Filters;
+namespace Nopensource\Sanitizer\Filters;
 
 use Illuminate\Support\Collection;
-use Waavi\Sanitizer\Contracts\Filter;
+use Nopensource\Sanitizer\Contracts\Filter;
 
 class Cast implements Filter
 {
