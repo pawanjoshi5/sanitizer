@@ -3,7 +3,7 @@
 namespace Nopensource\Sanitizer\Laravel;
 
 use Illuminate\Support\ServiceProvider;
-use Nopesource\Sanitizer\Laravel\RequestMakeCommand;
+use Nopensource\Sanitizer\Laravel\RequestMakeCommand;
 
 class SanitizerServiceProvider extends ServiceProvider
 {
