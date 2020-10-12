@@ -7,7 +7,22 @@ use Illuminate\Support\Arr;
 use Illuminate\Validation\ValidationRuleParser;
 use Illuminate\Validation\ClosureValidationRule;
 use InvalidArgumentException;
+use Nopensource\Sanitizer\Contracts\Filter;
+use Nopensource\Sanitizer\Filters\Capitalize;
+use Nopensource\Sanitizer\Filters\Cast;
+use Nopensource\Sanitizer\Filters\EscapeHTML;
+use Nopensource\Sanitizer\Filters\FormatDate;
+use Nopensource\Sanitizer\Filters\Lowercase;
+use Nopensource\Sanitizer\Filters\Uppercase;
+use Nopensource\Sanitizer\Filters\Trim;
+use Nopensource\Sanitizer\Filters\StripTags;
+use Nopensource\Sanitizer\Filters\Digit;
+use Nopensource\Sanitizer\Filters\FilterIf;
 
+/**
+ * Class Sanitizer
+ * @package Nopensource\Sanitizer
+ */
 class Sanitizer
 {
     /**
@@ -27,16 +42,16 @@ class Sanitizer
      *  @var array
      */
     protected $filters = [
-        'capitalize'  => \Nopensource\Sanitizer\Filters\Capitalize::class,
-        'cast'        => \Nopensource\Sanitizer\Filters\Cast::class,
-        'escape'      => \Nopensource\Sanitizer\Filters\EscapeHTML::class,
-        'format_date' => \Nopensource\Sanitizer\Filters\FormatDate::class,
-        'lowercase'   => \Nopensource\Sanitizer\Filters\Lowercase::class,
-        'uppercase'   => \Nopensource\Sanitizer\Filters\Uppercase::class,
-        'trim'        => \Nopensource\Sanitizer\Filters\Trim::class,
-        'strip_tags'  => \Nopensource\Sanitizer\Filters\StripTags::class,
-        'digit'       => \Nopensource\Sanitizer\Filters\Digit::class,
-        'filter_if'   => \Nopensource\Sanitizer\Filters\FilterIf::class,
+        'capitalize'  => Capitalize::class,
+        'cast'        => Cast::class,
+        'escape'      => EscapeHTML::class,
+        'format_date' => FormatDate::class,
+        'lowercase'   => Lowercase::class,
+        'uppercase'   => Uppercase::class,
+        'trim'        => Trim::class,
+        'strip_tags'  => StripTags::class,
+        'digit'       => Digit::class,
+        'filter_if'   => FilterIf::class,
     ];
 
     /**
